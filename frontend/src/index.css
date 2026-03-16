@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #FFF8F0;
+  color: #2D3436;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF1E6;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFE0CC;
+  border-radius: 3px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes pulse-dot {
+  0%, 80%, 100% { opacity: 0.3; }
+  40% { opacity: 1; }
+}
+
+.pulse-dot:nth-child(1) { animation: pulse-dot 1.4s infinite 0s; }
+.pulse-dot:nth-child(2) { animation: pulse-dot 1.4s infinite 0.2s; }
+.pulse-dot:nth-child(3) { animation: pulse-dot 1.4s infinite 0.4s; }
+
+@keyframes bounce-pixel {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.pixel-bounce {
+  animation: bounce-pixel 1s ease-in-out infinite;
+}
